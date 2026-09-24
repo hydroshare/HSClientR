@@ -17,6 +17,15 @@ access resources from HydroShare directly in your R environment, either
 by the package functions or the in-development
 [`R6 Class`](https://r6.r-lib.org/reference/R6Class.html).
 
+> **Status note:** This package is not currently being actively developed or
+> maintained. Some functionality still works, including direct resource lookups
+> such as `hs_resource(id = "...")`, but other features are broken or
+> unreliable.
+
+> *If you have use for a HydroShare R client, please let the Hydroshare dev team
+> know by emailing* **dev@cuahsi.org**. *If there is community interest, an R client
+> could be prioritized.*
+
 ## Installation
 
 You can install the developmental version of HSClientR with:
