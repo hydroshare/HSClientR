@@ -2,176 +2,197 @@
 % Please edit documentation in R/HSClient.R
 \name{HSClient}
 \alias{HSClient}
-\title{R6 Class representing a HydroShare Client}
+\title{Deprecated R6 HydroShare Client}
 \description{
-\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 
-\emph{In development}
+\code{HSClient} is deprecated and retained only for backward compatibility.
+Prefer direct package functions such as \code{\link[=hs_resource]{hs_resource()}}, \code{\link[=hs_files]{hs_files()}},
+and \code{\link[=hs_sysmeta]{hs_sysmeta()}}.
 }
 \section{Methods}{
 \subsection{Public methods}{
-\itemize{
-\item \href{#method-new}{\code{HSClient$new()}}
-\item \href{#method-print}{\code{HSClient$print()}}
-\item \href{#method-authenticate}{\code{HSClient$authenticate()}}
-\item \href{#method-query}{\code{HSClient$query()}}
-\item \href{#method-get_res}{\code{HSClient$get_res()}}
-\item \href{#method-next_res}{\code{HSClient$next_res()}}
-\item \href{#method-prev_res}{\code{HSClient$prev_res()}}
-\item \href{#method-next_page}{\code{HSClient$next_page()}}
-\item \href{#method-prev_page}{\code{HSClient$prev_page()}}
-\item \href{#method-clone}{\code{HSClient$clone()}}
-}
+  \itemize{
+    \item \href{#method-HSClient-initialize}{\code{HSClient$new()}}
+    \item \href{#method-HSClient-print}{\code{HSClient$print()}}
+    \item \href{#method-HSClient-authenticate}{\code{HSClient$authenticate()}}
+    \item \href{#method-HSClient-query}{\code{HSClient$query()}}
+    \item \href{#method-HSClient-get_res}{\code{HSClient$get_res()}}
+    \item \href{#method-HSClient-next_res}{\code{HSClient$next_res()}}
+    \item \href{#method-HSClient-prev_res}{\code{HSClient$prev_res()}}
+    \item \href{#method-HSClient-next_page}{\code{HSClient$next_page()}}
+    \item \href{#method-HSClient-prev_page}{\code{HSClient$prev_page()}}
+    \item \href{#method-HSClient-clone}{\code{HSClient$clone()}}
+  }
 }
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-new"></a>}}
-\if{latex}{\out{\hypertarget{method-new}{}}}
-\subsection{Method \code{new()}}{
-Initialize a HydroShare Client
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$new()}\if{html}{\out{</div>}}
-}
-
-\subsection{Returns}{
-A new \code{HSClient} object.
+\if{html}{\out{<a id="method-HSClient-initialize"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-initialize}{}}}
+\subsection{\code{HSClient$new()}}{
+  Initialize a HydroShare Client
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$new()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    A new \code{HSClient} object.
 
 \emph{Note: A message will be issued
-since R6-object is still in development.}
-}
-}
-\if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-print"></a>}}
-\if{latex}{\out{\hypertarget{method-print}{}}}
-\subsection{Method \code{print()}}{
-Print HSClient object
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$print()}\if{html}{\out{</div>}}
+since this R6 object is deprecated.}
+  }
 }
 
-\subsection{Returns}{
-\code{HSClient} output
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-authenticate"></a>}}
-\if{latex}{\out{\hypertarget{method-authenticate}{}}}
-\subsection{Method \code{authenticate()}}{
-Perform OAuth2 Authentication
+\if{html}{\out{<a id="method-HSClient-print"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-print}{}}}
+\subsection{\code{HSClient$print()}}{
+  Print HSClient object
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$print()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    \code{HSClient} output
+  }
+}
+
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-HSClient-authenticate"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-authenticate}{}}}
+\subsection{\code{HSClient$authenticate()}}{
+  Perform OAuth2 Authentication
 with HydroShare.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$authenticate()}\if{html}{\out{</div>}}
-}
-
-\subsection{Details}{
-Note, the access token will be set
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$authenticate()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Details}{
+    Note, the access token will be set
 as a header automatically if \code{.token}
 is \code{NULL}.
+  }
+  \subsection{Returns}{
+    self, invisibly.
+  }
 }
 
-\subsection{Returns}{
-self, invisibly.
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-query"></a>}}
-\if{latex}{\out{\hypertarget{method-query}{}}}
-\subsection{Method \code{query()}}{
-Query/Search HydroShare
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$query(...)}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-query"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-query}{}}}
+\subsection{\code{HSClient$query()}}{
+  Query/Search HydroShare
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$query(...)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{...}}{Query parameters. See \link{hs_resource} parameters.}
+    }
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    R6 object
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{...}}{Query parameters. See \link{hs_resource} parameters.}
-}
-\if{html}{\out{</div>}}
-}
-\subsection{Returns}{
-R6 object
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-get_res"></a>}}
-\if{latex}{\out{\hypertarget{method-get_res}{}}}
-\subsection{Method \code{get_res()}}{
-Get current resource
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$get_res()}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-get_res"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-get_res}{}}}
+\subsection{\code{HSClient$get_res()}}{
+  Get current resource
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$get_res()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    A \link[tibble:tibble-package]{tibble} of the current resource
+  }
 }
 
-\subsection{Returns}{
-A \link[tibble:tibble-package]{tibble} of the current resource
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-next_res"></a>}}
-\if{latex}{\out{\hypertarget{method-next_res}{}}}
-\subsection{Method \code{next_res()}}{
-Get next resource
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$next_res()}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-next_res"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-next_res}{}}}
+\subsection{\code{HSClient$next_res()}}{
+  Get next resource
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$next_res()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Resource tibble. See \verb{$get_res}.
+  }
 }
 
-\subsection{Returns}{
-Resource tibble. See \verb{$get_res}.
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-prev_res"></a>}}
-\if{latex}{\out{\hypertarget{method-prev_res}{}}}
-\subsection{Method \code{prev_res()}}{
-Get previous resource
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$prev_res()}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-prev_res"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-prev_res}{}}}
+\subsection{\code{HSClient$prev_res()}}{
+  Get previous resource
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$prev_res()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Resource tibble. See \verb{$get_res}.
+  }
 }
 
-\subsection{Returns}{
-Resource tibble. See \verb{$get_res}.
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-next_page"></a>}}
-\if{latex}{\out{\hypertarget{method-next_page}{}}}
-\subsection{Method \code{next_page()}}{
-Get next search page
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$next_page()}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-next_page"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-next_page}{}}}
+\subsection{\code{HSClient$next_page()}}{
+  Get next search page
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$next_page()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Query tibble. See \verb{$query}.
+  }
 }
 
-\subsection{Returns}{
-Query tibble. See \verb{$query}.
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-prev_page"></a>}}
-\if{latex}{\out{\hypertarget{method-prev_page}{}}}
-\subsection{Method \code{prev_page()}}{
-Get previous search page
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$prev_page()}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-prev_page"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-prev_page}{}}}
+\subsection{\code{HSClient$prev_page()}}{
+  Get previous search page
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$prev_page()}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Returns}{
+    Query tibble. See \verb{$query}.
+  }
 }
 
-\subsection{Returns}{
-Query tibble. See \verb{$query}.
-}
-}
 \if{html}{\out{<hr>}}
-\if{html}{\out{<a id="method-clone"></a>}}
-\if{latex}{\out{\hypertarget{method-clone}{}}}
-\subsection{Method \code{clone()}}{
-The objects of this class are cloneable with this method.
-\subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{HSClient$clone(deep = FALSE)}\if{html}{\out{</div>}}
+\if{html}{\out{<a id="method-HSClient-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-HSClient-clone}{}}}
+\subsection{\code{HSClient$clone()}}{
+  The objects of this class are cloneable with this method.
+  \subsection{Usage}{
+    \if{html}{\out{<div class="r">}}
+    \preformatted{HSClient$clone(deep = FALSE)}
+    \if{html}{\out{</div>}}
+  }
+  \subsection{Arguments}{
+    \if{html}{\out{<div class="arguments">}}
+    \describe{
+      \item{\code{deep}}{Whether to make a deep clone.}
+    }
+    \if{html}{\out{</div>}}
+  }
 }
 
-\subsection{Arguments}{
-\if{html}{\out{<div class="arguments">}}
-\describe{
-\item{\code{deep}}{Whether to make a deep clone.}
-}
-\if{html}{\out{</div>}}
-}
-}
 }

@@ -21,6 +21,12 @@
 #' Parameters marked with an asterisk (*) are required for
 #' that endpoint.
 #' 
+#' ## Deprecated Search Path (`hs_search`)
+#'
+#' `hs_search()` is retained for backward compatibility only.
+#' This method is no longer supported by this client and may
+#' return errors.
+#'
 #' ## Searching Resources (`hs_search`)
 #' 
 #' ### Endpoint:
@@ -227,7 +233,7 @@ hs_content_types <- function() {
 }
 
 # nolint start
-#' @title Search HydroShare Resources using solr conventions.
+#' @title Deprecated search helper for HydroShare resources.
 #' @param page (`integer`) A page number within the paginated result set.
 #' @param count (`integer`) Number of results to return per page.
 #' @param text (`character`) Search across all Resource Fields
@@ -268,6 +274,12 @@ hs_content_types <- function() {
 # nolint end
 hs_search <- function(page = NULL, count = NULL,
                       text = NULL, author = NULL, ...) {
+    lifecycle::deprecate_warn(
+        when = "0.3.1",
+        what = "hs_search()",
+        details = "The hs_search() method is no longer supported by this client and may return errors."
+    )
+
     # Prevents R CMD Check note about non-standard
     # evaluation with magrittr pipes
     . <- NULL
