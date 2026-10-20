@@ -35,7 +35,7 @@
 #' @export
 hs_discover <- function() {
     lifecycle::deprecate_warn(
-        when = "0.3.1",
+        when = "0.3.2",
         what = "hs_discover()",
         details = "The hs_discover() method is no longer supported by this client and may return errors."
     )

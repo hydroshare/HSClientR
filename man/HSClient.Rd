@@ -7,6 +7,7 @@
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 
 \code{HSClient} is deprecated and retained only for backward compatibility.
+It is no longer supported by this package and may return errors.
 Prefer direct package functions such as \code{\link[=hs_resource]{hs_resource()}}, \code{\link[=hs_files]{hs_files()}},
 and \code{\link[=hs_sysmeta]{hs_sysmeta()}}.
 }

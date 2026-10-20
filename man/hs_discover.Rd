@@ -15,8 +15,8 @@ details for \code{tibble} description.
 Query the HydroShare Discover Page
 
 \code{hs_discover()} is retained for backward compatibility only.
-The HydroShare Discover endpoint is no longer supported by this client,
-so calls may warn and return HTTP errors from the upstream service.
+This method is no longer supported by this client and may
+return errors.
 }
 \details{
 \subsection{Main \code{tibble}}{

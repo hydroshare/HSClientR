@@ -275,7 +275,7 @@ hs_content_types <- function() {
 hs_search <- function(page = NULL, count = NULL,
                       text = NULL, author = NULL, ...) {
     lifecycle::deprecate_warn(
-        when = "0.3.1",
+        when = "0.3.2",
         what = "hs_search()",
         details = "The hs_search() method is no longer supported by this client and may return errors."
     )

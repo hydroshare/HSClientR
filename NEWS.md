@@ -1,3 +1,17 @@
+HSClientR 0.3.2.9000 (2026-10-20)
+=================================
+
+### DEPRECATIONS
+
+  * Deprecated `hs_search()` with a warning that the method is no longer supported by this client and may return errors.
+  * Deprecated `hs_discover()` with a warning that the method is no longer supported by this client and may return errors.
+  * Deprecated the `HSClient` R6 client and updated initialization messaging to direct users to function-based APIs.
+
+### DOCUMENTATION
+
+  * Updated `README` to remove detailed `HSClient` usage examples and retain only a deprecation statement.
+  * Updated deprecation notes for deprecated search/discover paths to reflect current support status.
+
 HSClientR 0.3.1 (2021-03-31)
 ============================
 

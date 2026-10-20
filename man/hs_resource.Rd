@@ -29,9 +29,8 @@ that endpoint.
 \subsection{Deprecated Search Path (\code{hs_search})}{
 
 \code{hs_search()} is retained for backward compatibility only.
-The HydroShare \verb{/hsapi/resource/search} endpoint is no longer
-available in practice, so calls that route through this branch
-will warn and may return HTTP 404 errors.
+This method is no longer supported by this client and may
+return errors.
 }
 
 \subsection{Searching Resources (\code{hs_search})}{
