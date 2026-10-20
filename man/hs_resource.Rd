@@ -26,6 +26,13 @@ corresponding HydroShare API endpoint(s)/functions used.
 
 Parameters marked with an asterisk (*) are required for
 that endpoint.
+\subsection{Deprecated Search Path (\code{hs_search})}{
+
+\code{hs_search()} is retained for backward compatibility only.
+This method is no longer supported by this client and may
+return errors.
+}
+
 \subsection{Searching Resources (\code{hs_search})}{
 \subsection{Endpoint:}{
 \itemize{

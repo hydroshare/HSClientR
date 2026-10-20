@@ -2,7 +2,7 @@
 % Please edit documentation in R/hs_resource.R
 \name{hs_search}
 \alias{hs_search}
-\title{Search HydroShare Resources using solr conventions.}
+\title{Deprecated search helper for HydroShare resources.}
 \usage{
 hs_search(page = NULL, count = NULL, text = NULL, author = NULL, ...)
 }
@@ -23,7 +23,7 @@ A list with \code{.next}, \code{.prev}, and \code{results} attributes.
 \code{results} returns a \link[tibble:tibble-package]{tibble}.
 }
 \description{
-Search HydroShare Resources using solr conventions.
+Deprecated search helper for HydroShare resources.
 }
 \details{
 \subsection{Additional Parameters:}{\tabular{lll}{
