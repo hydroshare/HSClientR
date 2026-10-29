@@ -2,8 +2,8 @@
 #' @description Query the HydroShare Discover Page
 #'
 #' `hs_discover()` is retained for backward compatibility only.
-#' This method is no longer supported by this client and may
-#' return errors.
+#' This method is no longer supported by this client and now
+#' raises a deprecation error.
 #' @return A [tibble][tibble::tibble-package] of the first 40 results from
 #'         HydroShare's [Discover Page](https://www.hydroshare.org/search/). See
 #'         details for `tibble` description.
@@ -34,10 +34,10 @@
 #' @importFrom rlang .data
 #' @export
 hs_discover <- function() {
-    lifecycle::deprecate_warn(
+    lifecycle::deprecate_stop(
         when = "0.3.2",
         what = "hs_discover()",
-        details = "The hs_discover() method is no longer supported by this client and may return errors."
+        details = "The hs_discover() method is no longer supported by this client and now raises a deprecation error."
     )
 
     request <- httr::GET(

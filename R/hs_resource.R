@@ -24,8 +24,8 @@
 #' ## Deprecated Search Path (`hs_search`)
 #'
 #' `hs_search()` is retained for backward compatibility only.
-#' This method is no longer supported by this client and may
-#' return errors.
+#' This method is no longer supported by this client and now
+#' raises a deprecation error.
 #'
 #' ## Searching Resources (`hs_search`)
 #' 
@@ -274,10 +274,10 @@ hs_content_types <- function() {
 # nolint end
 hs_search <- function(page = NULL, count = NULL,
                       text = NULL, author = NULL, ...) {
-    lifecycle::deprecate_warn(
+    lifecycle::deprecate_stop(
         when = "0.3.2",
         what = "hs_search()",
-        details = "The hs_search() method is no longer supported by this client and may return errors."
+        details = "The hs_search() method is no longer supported by this client and now raises a deprecation error."
     )
 
     # Prevents R CMD Check note about non-standard
