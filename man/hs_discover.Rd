@@ -2,7 +2,7 @@
 % Please edit documentation in R/hs_discover.R
 \name{hs_discover}
 \alias{hs_discover}
-\title{HydroShare Discover API}
+\title{Deprecated HydroShare Discover API helper}
 \usage{
 hs_discover()
 }
@@ -13,6 +13,10 @@ details for \code{tibble} description.
 }
 \description{
 Query the HydroShare Discover Page
+
+\code{hs_discover()} is retained for backward compatibility only.
+This method is no longer supported by this client and may
+return errors.
 }
 \details{
 \subsection{Main \code{tibble}}{

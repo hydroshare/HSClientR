@@ -1,8 +1,11 @@
-#' @title R6 Class representing a HydroShare Client
+#' @title Deprecated R6 HydroShare Client
 #' @description 
-#' `r lifecycle::badge("experimental")`
+#' `r lifecycle::badge("deprecated")`
 #' 
-#' *In development*
+#' `HSClient` is deprecated and retained only for backward compatibility.
+#' It is no longer supported by this package and may return errors.
+#' Prefer direct package functions such as [hs_resource()], [hs_files()],
+#' and [hs_sysmeta()].
 #' @importFrom R6 R6Class
 #' @importFrom urltools param_get
 #' @importFrom lifecycle badge
@@ -14,12 +17,21 @@ HSClient <- R6::R6Class("HSClient",
         #' @return A new `HSClient` object.
         #'
         #' *Note: A message will be issued
-        #' since R6-object is still in development.*
+        #' since this R6 object is deprecated.*
         initialize = function() {
+            rlang::warn(
+                paste(
+                    "HSClient is deprecated and no longer supported by this package.",
+                    "It may return errors.",
+                    "Use direct package functions such as hs_resource(), hs_files(),",
+                    "and hs_sysmeta() instead."
+                )
+            )
+
             rlang::inform(
                 crayon::cyan(crayon::bold(paste0(
-                    "R6-based client still in-development.\n",
-                    "Full functionality may not exist."
+                    "R6-based client is deprecated.\n",
+                    "Use package functions instead."
                 )))
             )
 
@@ -37,10 +49,11 @@ HSClient <- R6::R6Class("HSClient",
                 crayon::silver("=======================================\n"),
                 "Thanks for using HSClientR! ",
                 crayon::red("\u2665"),
-                "\nYou can start a query with ",
-                crayon::red("$query()"),
-                "\nMake sure to authenticate with ",
-                crayon::red("$authenticate()"),
+                "\nThis R6 client is deprecated.",
+                "\nPrefer package functions like ",
+                crayon::red("hs_resource()"),
+                " and ",
+                crayon::red("hs_files()"),
                 "\n"
             )
 
